@@ -7,8 +7,9 @@ public class EnveriomentSpawner : MonoBehaviour
     [Header("Spawner Settings")]
     public GameObject[] items;
     public bool LeftSpawner = true;
-
-
+    public bool efective = false;
+    [Tooltip("Spawn points for efective objects.")]
+    public Transform[] spawnPoints;
     private float SpawnTime = 0f;
     private float timer = 0f;
     System.Random random = new System.Random();
@@ -25,11 +26,16 @@ public class EnveriomentSpawner : MonoBehaviour
         if (timer >= GameManager.staticSpawnTime)
         {
             timer = 0f;
-            if (LeftSpawner)
+            if (LeftSpawner && !efective)
                 SpawnObjectsL();
-            else
+            else if(!efective)
             {
                 SpawnObjectsR();
+            }
+
+            if (efective)
+            {
+                SpawnEfectiveObjects();
             }
         }
     }
@@ -43,6 +49,11 @@ public class EnveriomentSpawner : MonoBehaviour
     void SpawnObjectsR()
     {       
         Instantiate(items[random.Next(0, 128) % items.Length], transform.position, Quaternion.Euler(0, 180, 0), transform.parent);     
+    }
+
+    void SpawnEfectiveObjects()
+    {
+        Instantiate(items[random.Next(0, 128) % items.Length], spawnPoints[random.Next(0, 128) % spawnPoints.Length].transform.position, Quaternion.Euler(0, 180, 0), transform.parent);
     }
 }
 

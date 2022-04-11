@@ -7,6 +7,7 @@ public class ObjectFlow : MonoBehaviour
     private Vector3 speedVec = new Vector3(0, 0, 0);
     public float speed = 0f;
 
+
     void Start()
     {
         speed = GameManager.staticSpeed;
@@ -25,6 +26,18 @@ public class ObjectFlow : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Obstacle")
+        {
+            Destroy(this.gameObject);
+        }
+        else if ((this.tag == "Bottle" || this.tag == "Harmfull") && other.gameObject.tag == "Player") 
+        {
+            this.transform.GetChild(0).gameObject.SetActive(false);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
         {
             Destroy(this.gameObject);
         }

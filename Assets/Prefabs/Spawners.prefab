@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1133712606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1133712607}
+  - component: {fileID: 1133712608}
+  m_Layer: 0
+  m_Name: EfectiveSpawnerR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1133712607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133712606}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.62, y: 0, z: 6.65}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8754712225944141879}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1133712608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133712606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73305b5d726f72045b13574c503f9aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 4910180941917186514, guid: 0528d9cd3aecd7c4984076c46af2e6ee, type: 3}
+  - {fileID: 1295396015367291357, guid: 257c9b7c1b40f9541959342d7ab4c486, type: 3}
+  - {fileID: 2111473361748331016, guid: 98a55538fff9ee744979fc1f38156d5a, type: 3}
+  - {fileID: 6408619039161515602, guid: 30c7b44f0a4a26b4c9e12b08c10d8aed, type: 3}
+  - {fileID: 6357871990019942274, guid: ac12283f9dcf1a64687c95e98e11ac52, type: 3}
+  LeftSpawner: 0
+  efective: 1
+  spawnPoints:
+  - {fileID: 8529351796015902052, guid: acf3c3e6b6fee324f8844d438f2a3968, type: 3}
+  - {fileID: 4163179825021739765, guid: 81ffd180a96b77b4692e6ff315dd3ec3, type: 3}
 --- !u!1 &3070756390048175629
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,12 +98,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
+  - {fileID: 6514354975724251128, guid: 1dda82b4c0423b34ca1494742d14eb3a, type: 3}
   - {fileID: 6252153606661508482, guid: 79189c94619c5354aa8d523e1b60cf00, type: 3}
+  - {fileID: 8692342888860773295, guid: 561a6dd97bbe35e4e8ff9fb86651d8ee, type: 3}
+  - {fileID: 8486260772473471569, guid: 1896acfe9a8abbf40b02110bc4c4f1d8, type: 3}
   - {fileID: 6252153606661508482, guid: 79189c94619c5354aa8d523e1b60cf00, type: 3}
+  - {fileID: 6514354975724251128, guid: 1dda82b4c0423b34ca1494742d14eb3a, type: 3}
+  - {fileID: 8692342888860773295, guid: 561a6dd97bbe35e4e8ff9fb86651d8ee, type: 3}
   - {fileID: 8486260772473471569, guid: 1896acfe9a8abbf40b02110bc4c4f1d8, type: 3}
-  - {fileID: 8486260772473471569, guid: 1896acfe9a8abbf40b02110bc4c4f1d8, type: 3}
-  SpawnTime: 4
   LeftSpawner: 0
+  efective: 0
+  spawnPoints: []
 --- !u!1 &3070756390207593163
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,8 +154,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - {fileID: 293680400728347184, guid: 719f78b39fbd5724ea7be482d891d066, type: 3}
-  SpawnTime: 2.7
   LeftSpawner: 1
+  efective: 0
+  spawnPoints: []
 --- !u!1 &3070756390737448448
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,11 +202,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - {fileID: 6252153606661508482, guid: 79189c94619c5354aa8d523e1b60cf00, type: 3}
+  - {fileID: 6514354975724251128, guid: 1dda82b4c0423b34ca1494742d14eb3a, type: 3}
+  - {fileID: 8692342888860773295, guid: 561a6dd97bbe35e4e8ff9fb86651d8ee, type: 3}
   - {fileID: 8486260772473471569, guid: 1896acfe9a8abbf40b02110bc4c4f1d8, type: 3}
-  - {fileID: 8486260772473471569, guid: 1896acfe9a8abbf40b02110bc4c4f1d8, type: 3}
-  - {fileID: 6252153606661508482, guid: 79189c94619c5354aa8d523e1b60cf00, type: 3}
-  SpawnTime: 4
   LeftSpawner: 1
+  efective: 0
+  spawnPoints: []
 --- !u!1 &3070756390869905624
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,8 +253,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - {fileID: 293680400728347184, guid: 719f78b39fbd5724ea7be482d891d066, type: 3}
-  SpawnTime: 2.7
   LeftSpawner: 0
+  efective: 0
+  spawnPoints: []
 --- !u!1 &5338156281982030867
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +287,7 @@ Transform:
   - {fileID: 3070756390048175627}
   - {fileID: 3070756390207593161}
   - {fileID: 3070756390869905622}
+  - {fileID: 1133712607}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

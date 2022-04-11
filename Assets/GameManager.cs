@@ -12,16 +12,28 @@ public class GameManager : MonoBehaviour
     public float FlowSpeed = 0;
     public float SpawnTime = 0;
 
+    [Header("Efective Object Settings")]
+    public float EfectiveSpawnTime = 0;
+
+    [Header("Player")]
+    public GameObject player;
+
     static public float ControlTime = 0f;
     static public float staticLevelTime = 0f;
     static public float staticSpeed = 0f;
     static public float staticSpawnTime = 0;
+    static public float staticEfectiveSpawnTime = 0;
+    static public GameObject staticPlayer;
     private void Awake()
     {
         Time.timeScale = 1;
         staticLevelTime = levelTime;
         staticSpeed = FlowSpeed;
         staticSpawnTime = SpawnTime;
+        staticEfectiveSpawnTime = EfectiveSpawnTime;
+        staticPlayer = player;
+
+
     }
     void Start()
     {
@@ -41,6 +53,13 @@ public class GameManager : MonoBehaviour
             staticSpawnTime = 0.25f;
         }
 
-        Debug.Log(ControlTime);
+
+        staticEfectiveSpawnTime = staticEfectiveSpawnTime - Time.deltaTime / 20;
+        if (staticEfectiveSpawnTime <= 0.5f)
+        {
+            staticEfectiveSpawnTime = 0.5f;
+        }
+
+        //Debug.Log(ControlTime);
     }
 }

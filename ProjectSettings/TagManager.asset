@@ -7,6 +7,8 @@ TagManager:
   - Stairs
   - Human
   - Obstacle
+  - Bottle
+  - Harmfull
   layers:
   - Default
   - TransparentFX
@@ -14,10 +16,10 @@ TagManager:
   - Overpass
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Build4
+  - Plane
+  - Build2
+  - BuildLeft
   - 
   - 
   - 
