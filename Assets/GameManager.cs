@@ -43,14 +43,23 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(ControlTime);
         ControlTime += Time.deltaTime;
-        staticSpeed += Time.deltaTime/3;        
+        if (staticSpeed < 27)
+        {
+            staticSpeed += Time.deltaTime / 3;
+        }
+        else
+        {
+            staticSpeed = 27;
+        }
+     
 
 
         staticSpawnTime = staticSpawnTime - Time.deltaTime / 50;
-        if (staticSpawnTime <= 0.25f)
+        if (staticSpawnTime <= 0.40f)
         {
-            staticSpawnTime = 0.25f;
+            staticSpawnTime = 0.40f;
         }
 
 
