@@ -235,6 +235,67 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 8529351796015902052, guid: acf3c3e6b6fee324f8844d438f2a3968, type: 3}
   - {fileID: 4163179825021739765, guid: 81ffd180a96b77b4692e6ff315dd3ec3, type: 3}
+--- !u!1 &1238919802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1238919803}
+  - component: {fileID: 1238919804}
+  m_Layer: 0
+  m_Name: OnceSpawnSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1238919803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238919802}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.62, y: 0, z: 6.65}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8754712225944141879}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1238919804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238919802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a83f55ef544b84f419b10288ea33f030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 2111473361748331016, guid: 98a55538fff9ee744979fc1f38156d5a, type: 3}
+  - {fileID: 1295396015367291357, guid: 257c9b7c1b40f9541959342d7ab4c486, type: 3}
+  - {fileID: 2111473361748331016, guid: 98a55538fff9ee744979fc1f38156d5a, type: 3}
+  - {fileID: 6357871990019942274, guid: ac12283f9dcf1a64687c95e98e11ac52, type: 3}
+  - {fileID: 6408619039161515602, guid: 30c7b44f0a4a26b4c9e12b08c10d8aed, type: 3}
+  - {fileID: 6357871990019942274, guid: ac12283f9dcf1a64687c95e98e11ac52, type: 3}
+  - {fileID: 4910180941917186514, guid: 0528d9cd3aecd7c4984076c46af2e6ee, type: 3}
+  spawnPoints:
+  - {fileID: 1012083930386568003, guid: fcc4aa0379fd00841bade4e3250417a1, type: 3}
+  - {fileID: 5313978037905268333, guid: ad2a08b5aa7dd494780eb8d06dfda396, type: 3}
+  - {fileID: 7901058871020236416, guid: c9c120122a8c6b74f838fd7f69401e4e, type: 3}
+  - {fileID: 6495087874274940738, guid: ca3e1fbb36a6cf44a8696fcb849b088a, type: 3}
+  - {fileID: 8503078188694803907, guid: 2fc43d479f246944786699c76be49563, type: 3}
+  - {fileID: 6197559913234648252, guid: 1778052015c3f79499f6a2833076d577, type: 3}
+  - {fileID: 7844397832624096150, guid: 290e28b0424506744b1baf71207b2471, type: 3}
+  - {fileID: 7182320469159519890, guid: a1cdc59aaf487384bbd88d0054546a79, type: 3}
 --- !u!1 &3070756390048175629
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +538,7 @@ Transform:
   - {fileID: 338649476}
   - {fileID: 724779514}
   - {fileID: 1119695877}
+  - {fileID: 1238919803}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
