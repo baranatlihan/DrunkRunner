@@ -6,20 +6,39 @@ public class ObjectFlow : MonoBehaviour
 {
     private Vector3 speedVec = new Vector3(0, 0, 0);
     public float speed = 0f;
-
+    public bool opositeWay = false;
 
     void Start()
     {
-        speed = GameManager.staticSpeed;
-        speedVec.Set(0, 0, -speed);
+        if (!opositeWay)
+        {
+            speed = GameManager.staticSpeed;
+            speedVec.Set(0, 0, -speed);
+        }
+        else
+        {
+            speed = GameManager.staticSpeed;
+            speedVec.Set(0, 0, speed);
+        }
+        
     }
 
 
     void Update()
     {
+        if (!opositeWay)
+        {
             speed = GameManager.staticSpeed;
             speedVec.Set(0, 0, -speed);
             gameObject.transform.localPosition += speedVec * Time.deltaTime;
+        }
+        else
+        {
+            speed = GameManager.staticSpeed;
+            speedVec.Set(0, 0, speed);
+            gameObject.transform.localPosition += speedVec * Time.deltaTime;
+        }
+            
        
     }
 
