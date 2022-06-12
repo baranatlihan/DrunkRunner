@@ -29,7 +29,7 @@ public class HumanDeath : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            //for playerprefs: example on last game-> PlayerPrefs.SetInt("deadCount", PlayerPrefs.GetInt("deadCount") + 1);
+            PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score") + 3);
             Destroy(this.gameObject);
             Instantiate(ragdolObj, transform.position, Quaternion.identity, transform.parent);
         }

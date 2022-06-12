@@ -11,9 +11,11 @@ public class ObjectEffectScript : MonoBehaviour
             GameManager.staticPlayer.transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
         }
         
-        if (other.gameObject.tag == "Player" && (this.tag =="Harmfull"||this.tag=="Human") && GameManager.staticPlayer.transform.localScale.x > 0.25)
+
+        if (other.gameObject.CompareTag("Player") && this.CompareTag("Harmfull") && GameManager.staticPlayer.transform.localScale.x > 0.25)
         {
             GameManager.staticPlayer.transform.localScale -= new Vector3(0.02f, 0.02f, 0.02f);
         }
     }
+
 }

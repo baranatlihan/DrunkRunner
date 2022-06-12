@@ -11,13 +11,14 @@ public class ScoreSpawnerScript : MonoBehaviour
 
     void Start()
     {
-        bound = new Bounds(transform.position, new Vector3(4.5f, 0, 7.4f));
-        
-        for (int i = 0; i < 100; i++)
-        {
-            Instantiate(toSpawns[random.Next(0, 128) % toSpawns.Length], RandomPoint(bound), Quaternion.identity);
+        bound = new Bounds(transform.position, new Vector3(4.8f, 0, 80f));
+
+
+        for (int i = 0; i < (10 + PlayerPrefs.GetInt("Score")); i++)
+        {   
+            Instantiate(toSpawns[random.Next(0, 128) % toSpawns.Length], RandomPoint(bound), Quaternion.identity, transform.parent);
         }
-            
+        
     }
 
     public static Vector3 RandomPoint(Bounds bound)
@@ -26,7 +27,7 @@ public class ScoreSpawnerScript : MonoBehaviour
         Random.Range(bound.min.x, bound.max.x),
         Random.Range(bound.min.y, bound.max.y),
         Random.Range(bound.min.z, bound.max.z)
-    );
+        );
     }
 
 }

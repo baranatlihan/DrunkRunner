@@ -58,6 +58,15 @@ public class ObjectFlow : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            if (this.CompareTag("Harmfull"))
+            {
+                PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score") - 3);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score") + 2);
+            }
+
             Destroy(this.gameObject);
         }
     }

@@ -33,10 +33,10 @@ public class GameManager : MonoBehaviour
         staticEfectiveSpawnTime = EfectiveSpawnTime;
         staticPlayer = player;
 
-
     }
     void Start()
     {
+        PlayerPrefs.SetInt("Score", 0);
         ControlTime = 0f;
     }
 
@@ -69,6 +69,6 @@ public class GameManager : MonoBehaviour
             staticEfectiveSpawnTime = 0.5f;
         }
 
-        //Debug.Log(ControlTime);
+
     }
 }
