@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 0;
         spawner.SetActive(false);
     }
 
@@ -24,7 +25,7 @@ public class LevelManager : MonoBehaviour
                 spawner.SetActive(true);
             }
         }
-         if(GameManager.staticLevelTime + 4 < GameManager.ControlTime)
+         if(GameManager.staticLevelTime + 5 < GameManager.ControlTime)
         {
             SceneManager.LoadScene(0);
         }

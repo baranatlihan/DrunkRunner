@@ -23,7 +23,12 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         score = PlayerPrefs.GetInt("Score");
-        Time.timeScale = 0;
+
+        if(Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+        }
+        
     }
 
     void Update()
@@ -48,6 +53,7 @@ public class UIManager : MonoBehaviour
         MenuPanel.SetActive(false);
         ScoreTimePanel.SetActive(true);
         MenuButton.SetActive(true);
+        joystick.SetActive(true);
     }
 
     public void CreditsButton()
@@ -67,7 +73,7 @@ public class UIManager : MonoBehaviour
 
     public void Pause2Menu()
     {
-        joystick.SetActive(true);
+        joystick.SetActive(false);
         MenuPanel.SetActive(true);
         ScoreTimePanel.SetActive(false);
         MenuButton.SetActive(false);
@@ -80,6 +86,7 @@ public class UIManager : MonoBehaviour
         TapToStartButton.SetActive(false);
         MenuButton.SetActive(true);
         ScoreTimePanel.SetActive(true);
+        joystick.SetActive(true);
         Time.timeScale = 1;
     }
 

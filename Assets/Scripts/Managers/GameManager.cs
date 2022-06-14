@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(ControlTime);
+
         ControlTime += Time.deltaTime;
         if (staticSpeed < 27)
         {
